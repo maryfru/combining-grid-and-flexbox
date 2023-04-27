@@ -586,10 +586,74 @@ section.problem {
 }
 
 /* ######### 9. Footer ######### */
+footer {
+  margin-top: 1rem;
+}
 
 /* ######### 9a. Footer > Contact ######### */
+.form {
+  background-color: #223055;
+  color: #fff;
+  padding: 1rem 1rem 2rem;
+}
+
+.form p {
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
 
 /* ######### 9b. Footer > Connect ######### */
+.social,
+.contactInfo {
+  background-color: #13b1e7;
+  color: #fff;
+  padding: 1rem 1rem 0;
+  text-align: center;
+}
+
+.social h3 {
+  border-bottom: solid 1px #b6e8ff;
+  font-weight: 400;
+  padding-bottom: 0.25rem;
+}
+
+.socialIcons {
+  font-size: 200%;
+  padding: 1rem 0;
+}
+
+.socialIcons a {
+  color: #223055;
+  padding: 0 0.5rem;
+}
+
+.socialIcons a:hover {
+  color: #ffc107;
+}
+
+.contactInfo {
+  padding-top: 0;
+}
+
+.contactInfo article {
+  border-top: solid 1px #b6e8ff;
+  padding: 1rem 0;
+}
+
+.contactInfo h4 {
+  font-weight: 400;
+}
+
+.contactInfo li {
+  font-weight: 300;
+  list-style-type: none;
+}
+
+.copy {
+  font-size: 70%;
+  font-weight: 300;
+  padding-top: 1rem;
+}
 
 /* ############ 10. Media Queries ############ */
 
@@ -796,8 +860,81 @@ section.problem {
     flex-basis: 48%;
     grid-template-columns: 2fr 4fr;
   }
+
+  /* ############ 10a-viii. Footer, Large screen rules ############ */
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.25fr;
+  }
+
+  .contact {
+  }
+
+  .social h3 {
+    border-bottom: none;
+    padding: 0.5rem 1rem 0.5rem 0;
+    text-align: right;
+  }
+
+  .social article {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    align-items: center;
+  }
+
+  .socialIcons {
+    border-left: solid #fff 1px;
+    font-size: 150%;
+    padding: 0.5rem 0 0.5rem 1rem;
+  }
+
+  .socialIcons a {
+    display: block;
+  }
+
+  .contactInfo {
+    background-color: #b6e8ff;
+    color: #233156;
+    padding: 1rem 0 0;
+    grid-column: 1 / -1;
+  }
 }
 
 /* ############ 10b. Media Query, (min-width: 1000px) ############ */
 @media screen and (min-width: 1000px) {
+  /* ######### 10b-i. Footer, X-Large screen rules ######### */
+  .form {
+    display: grid;
+    grid-template-columns: auto minmax(min-content, 580px);
+    grid-template-areas:
+      ". h"
+      ". p";
+  }
+
+  .form h3 {
+    grid-area: h;
+  }
+
+  .form p.formIntro {
+    grid-area: p;
+  }
+
+  .social article {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .socialIcons {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .socialIcons a {
+    display: inline-block;
+    font-size: 180%;
+  }
 }
