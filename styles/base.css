@@ -476,6 +476,80 @@ section.problem {
 }
 
 /* ############ 7a. Problem > Action ############ */
+.action {
+  padding: 1rem;
+}
+
+.action h3 {
+  color: #35b1e8;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.action h1 + p {
+  border-left: solid 1px #dedede;
+  padding-left: 1rem;
+}
+
+.action article h1 {
+  margin-left: 1rem;
+}
+
+.action ul li {
+  border: solid 1px #dedede;
+  border-radius: 6px;
+  list-style-type: none;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+}
+
+.action li h1 {
+  background: url(/images/action1.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 6px 0 0 6px;
+  color: #fff;
+  padding-top: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px #223055;
+  grid-column: 1 / 2;
+  grid-row: span 2;
+}
+
+.action li h4 {
+  background-color: #223055;
+  border-radius: 0 6px 0 0;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  grid-column: 2 / -1;
+  align-self: start;
+}
+
+.action li p {
+  padding: 0.5rem 1rem 1rem;
+  grid-column: 2 / -1;
+}
+
+.action li:nth-of-type(2) h1 {
+  background-image: url(/images/action2.jpg);
+}
+
+.action li:nth-of-type(3) h1 {
+  background-image: url(/images/action3.jpg);
+}
+
+.action li:nth-of-type(4) h1 {
+  background-image: url(/images/action4.jpg);
+}
+
+.action li:nth-of-type(5) h1 {
+  background-image: url(/images/action5.jpg);
+}
+
+.action li:nth-of-type(6) h1 {
+  background-image: url(/images/action6.jpg);
+}
 
 /* ############ 8. Gallery ############ */
 
@@ -632,7 +706,6 @@ section.problem {
   }
 
   /* ############ 10a-vi. Problem, Large screen rules ############ */
-
   section.problem {
     background: url(/images/problem1.png) no-repeat center left;
     max-width: 1200px;
@@ -662,6 +735,34 @@ section.problem {
 
   .problem img {
     display: none;
+  }
+
+  /* ############ 10a-vii. Actions, Large screen rules ############ */
+  .action {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .action article {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .action article h1 {
+    text-align: right;
+    margin-right: 1rem;
+  }
+
+  .action ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .action ul li {
+    flex-basis: 48%;
+    grid-template-columns: 2fr 4fr;
   }
 }
 
